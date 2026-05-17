@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joalheria e Óptica Biz | São Francisco do Sul - SC</title>
+  <meta name="description" content="Joalheria e Óptica Biz - Tradição desde 1958. Joias em prata, ouro e folheado, óculos, lentes, relógios e gravações especializadas em São Francisco do Sul - SC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --nude-50:  #FAF6F1;
+      --nude-100: #F3EBE0;
+      --nude-200: #E8D9C6;
+      --nude-300: #D4BFA3;
+      --nude-400: #BFA080;
+      --nude-500: #A07F5E;
+      --nude-600: #7A5E40;
+      --nude-700: #503C27;
+      --sage-50:  #F2F5EF;
+      --sage-100: #DDE8D6;
+      --sage-200: #C0D4B4;
+      --sage-300: #9BBC8C;
+      --sage-400: #78A066;
+      --sage-500: #5A7F4C;
+      --sage-600: #3E5C34;
+      --sage-700: #263A1F;
+      --gold:     #B8963E;
+      --gold-lt:  #D4B06A;
+      --gold-dk:  #7A6020;
+      --ink:      #2A1F12;
+      --white:    #FFFEFB;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: var(--nude-50); color: var(--nude-700); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 5vw;
+      background: rgba(250,246,241,0.96); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--nude-200); transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 28px rgba(80,60,39,0.08); }
+    .nav-brand { text-decoration: none; line-height: 1.2; }
+    .nav-brand-main { display: block; font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 500; color: var(--nude-700); letter-spacing: 0.02em; }
+    .nav-brand-sub  { display: block; font-size: 0.57rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--sage-500); font-weight: 300; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-600); text-decoration: none; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--sage-600); }
+    .nav-right { display: flex; align-items: center; gap: 0.6rem; }
+    .nav-social-ico { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid var(--nude-200); color: var(--nude-500); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+    .nav-social-ico:hover { border-color: var(--sage-400); color: var(--sage-600); background: var(--sage-50); }
+    .nav-social-ico svg { width: 15px; height: 15px; fill: currentColor; }
+    .nav-cta { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.5rem 1.3rem; border: 1px solid var(--sage-400); color: var(--sage-600); text-decoration: none; transition: background 0.22s, color 0.22s; }
+    .nav-cta:hover { background: var(--sage-400); color: var(--white); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--nude-600); }
+
+    /* ── HERO ── */
+    #hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 9rem 5vw 5rem; background: var(--nude-50); position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 50% 50% at 20% 80%, rgba(192,212,180,0.18) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 80% 20%, rgba(192,212,180,0.14) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 50% 50%, rgba(212,191,163,0.12) 0%, transparent 70%); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(160,127,94,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(160,127,94,0.03) 1px, transparent 1px); background-size: 64px 64px; }
+    .hero-since { display: flex; align-items: center; gap: 16px; margin-bottom: 2.2rem; animation: fadeUp 0.9s ease both; }
+    .since-line { width: 44px; height: 1px; background: var(--sage-400); }
+    .since-text { font-size: 0.6rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--sage-600); font-weight: 400; }
+    #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6.8rem); font-weight: 400; line-height: 1.07; color: var(--nude-700); animation: fadeUp 0.9s 0.12s ease both; }
+    #hero h1 em { font-style: italic; color: var(--sage-600); }
+    .hero-sub { margin-top: 1.5rem; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-400); font-weight: 300; animation: fadeUp 0.9s 0.24s ease both; }
+    .hero-rule { width: 1px; height: 54px; background: linear-gradient(to bottom, var(--sage-400), transparent); margin: 2.8rem auto 2.2rem; animation: fadeUp 0.9s 0.36s ease both; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.9s 0.48s ease both; }
+    .btn-dark { display: inline-block; padding: 0.88rem 2.3rem; background: var(--nude-700); color: var(--nude-50); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; font-weight: 300; transition: background 0.22s, transform 0.18s; }
+    .btn-dark:hover { background: var(--ink); transform: translateY(-2px); }
+    .btn-sage { display: inline-block; padding: 0.88rem 2.3rem; background: var(--sage-400); color: var(--white); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; font-weight: 300; transition: background 0.22s, transform 0.18s; }
+    .btn-sage:hover { background: var(--sage-500); transform: translateY(-2px); }
+    .btn-outline { display: inline-block; padding: 0.88rem 2.3rem; border: 1px solid var(--nude-300); color: var(--nude-600); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; font-weight: 300; transition: border-color 0.22s, background 0.22s, transform 0.18s; }
+    .btn-outline:hover { border-color: var(--nude-400); background: var(--nude-100); transform: translateY(-2px); }
+
+    /* ── SOCIAL STRIP ── */
+    .social-strip { background: var(--sage-100); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); padding: 1.1rem 5vw; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .social-strip-label { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-600); font-weight: 400; }
+    .social-pill { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.52rem 1.3rem; border: 1px solid var(--sage-300); background: var(--white); color: var(--sage-700); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.14em; font-weight: 400; transition: background 0.2s, border-color 0.2s, transform 0.18s; }
+    .social-pill:hover { background: var(--sage-50); border-color: var(--sage-400); transform: translateY(-1px); }
+    .social-pill svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── SECTION ── */
+    section { padding: 7rem 5vw; }
+    .eyebrow { font-size: 0.6rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--sage-600); margin-bottom: 0.9rem; font-weight: 400; }
+    .sec-h { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 400; line-height: 1.12; color: var(--nude-700); }
+    .sec-h em { font-style: italic; color: var(--sage-600); }
+    .sec-p { font-size: 0.88rem; line-height: 1.95; color: var(--nude-400); max-width: 540px; margin-top: 1rem; font-weight: 300; }
+
+    /* ── SOBRE ── */
+    #sobre { background: var(--white); border-top: 1px solid var(--nude-200); }
+    .sobre-grid { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .sobre-frame { width: 100%; max-width: 420px; aspect-ratio: 3/4; border: 1px solid var(--nude-200); background: var(--nude-100); display: flex; align-items: center; justify-content: center; position: relative; }
+    .sobre-frame::before { content: ''; position: absolute; top: 16px; left: 16px; right: 16px; bottom: 16px; border: 1px solid rgba(90,127,76,0.15); pointer-events: none; }
+    .sobre-frame-ico { font-size: 5.5rem; opacity: 0.1; user-select: none; }
+    .sobre-frame-cap { position: absolute; bottom: 2.2rem; left: 0; right: 0; text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.9rem; color: var(--sage-600); opacity: 0.75; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 2.2rem; background: var(--nude-200); border: 1px solid var(--nude-200); }
+    .stat { background: var(--nude-50); padding: 1.4rem 1.2rem; }
+    .stat-n { font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 400; color: var(--sage-600); line-height: 1; }
+    .stat-l { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-400); margin-top: 0.35rem; font-weight: 300; }
+
+    /* ── HORÁRIOS ── */
+    #horarios { background: var(--sage-50); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); padding: 5rem 5vw; }
+    .horarios-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .horarios-cards { display: flex; flex-direction: column; gap: 1px; background: var(--sage-200); border: 1px solid var(--sage-200); margin-top: 2rem; }
+    .horario-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 1.1rem 1.5rem; gap: 1rem; }
+    .horario-row.closed { background: var(--nude-50); opacity: 0.6; }
+    .horario-dia { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--nude-600); font-weight: 400; }
+    .horario-horas { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--sage-700); font-style: italic; text-align: right; }
+    .horario-horas.fechado { font-family: 'Lato', sans-serif; font-style: normal; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nude-400); }
+    .horario-dot { width: 8px; height: 8px; background: var(--sage-400); border-radius: 50%; flex-shrink: 0; }
+    .horario-dot.off { background: var(--nude-300); }
+    .horarios-note { margin-top: 1.2rem; font-size: 0.75rem; color: var(--sage-600); line-height: 1.7; font-weight: 300; }
+    .horarios-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; }
+    .horarios-clock {
+      width: 160px; height: 160px;
+      border: 1px solid var(--sage-200); background: var(--white);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .horarios-clock-inner {
+      width: 120px; height: 120px;
+      border: 1px solid var(--sage-100); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .clock-emoji { font-size: 3rem; }
+    .horarios-tagline { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--sage-700); text-align: center; line-height: 1.5; }
+
+    /* ── SERVIÇOS ── */
+    #servicos { background: var(--nude-50); }
+    .srv-hd { text-align: center; margin-bottom: 3.5rem; }
+    .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; max-width: 1200px; margin: 0 auto; background: var(--nude-200); border: 1px solid var(--nude-200); }
+    .srv { background: var(--white); padding: 2.5rem 2rem 2.2rem; border-bottom: 2px solid transparent; transition: border-color 0.25s, background 0.22s; }
+    .srv:hover { border-bottom-color: var(--sage-400); background: var(--sage-50); }
+    .srv-ico { width: 46px; height: 46px; border: 1px solid var(--nude-200); background: var(--nude-100); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.2rem; }
+    .srv-title { font-family: 'Playfair Display', serif; font-size: 1.22rem; font-weight: 400; color: var(--nude-700); margin-bottom: 0.55rem; }
+    .srv-desc { font-size: 0.82rem; line-height: 1.9; color: var(--nude-400); font-weight: 300; }
+    .srv-tag { display: inline-block; margin-top: 1rem; font-size: 0.57rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-600); border: 1px solid var(--sage-200); padding: 0.26rem 0.7rem; background: var(--sage-50); }
+
+    /* ── GALERIA ── */
+    #galeria { background: var(--nude-100); border-top: 1px solid var(--nude-200); }
+    .galeria-hd { text-align: center; margin-bottom: 3rem; }
+    .galeria-hd .sec-p { margin: 0.8rem auto 0; text-align: center; }
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      max-width: 960px; margin: 0 auto 2.5rem;
+    }
+    .galeria-item {
+      aspect-ratio: 1/1;
+      background: var(--nude-200);
+      border: 1px solid var(--nude-200);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; position: relative;
+      cursor: pointer;
+      transition: transform 0.22s;
+    }
+    .galeria-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block; transition: transform 0.4s ease;
+    }
+    .galeria-item:hover img { transform: scale(1.05); }
+    /* placeholder when no image */
+    .galeria-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.5rem; background: var(--nude-100);
+    }
+    .galeria-placeholder-icon { font-size: 2rem; opacity: 0.25; }
+    .galeria-placeholder-text { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nude-400); }
+    .galeria-overlay { position: absolute; inset: 0; background: rgba(38,58,31,0); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+    .galeria-item:hover .galeria-overlay { background: rgba(38,58,31,0.25); }
+    .galeria-overlay svg { opacity: 0; width: 28px; height: 28px; fill: var(--white); transition: opacity 0.3s; }
+    .galeria-item:hover .galeria-overlay svg { opacity: 1; }
+    .galeria-cta { display: flex; justify-content: center; margin-top: 1rem; }
+    .galeria-insta-btn {
+      display: inline-flex; align-items: center; gap: 0.8rem;
+      padding: 0.9rem 2.2rem;
+      border: 1px solid var(--sage-300); background: var(--white);
+      color: var(--sage-700); text-decoration: none;
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s, transform 0.18s;
+    }
+    .galeria-insta-btn:hover { background: var(--sage-50); border-color: var(--sage-400); transform: translateY(-2px); }
+    .galeria-insta-btn svg { width: 18px; height: 18px; fill: var(--sage-600); }
+    /* upload hint */
+    .galeria-hint {
+      text-align: center; margin-top: 2rem;
+      padding: 1.5rem; border: 1px dashed var(--nude-300); background: var(--nude-50);
+      max-width: 560px; margin-left: auto; margin-right: auto;
+    }
+    .galeria-hint p { font-size: 0.78rem; color: var(--nude-500); line-height: 1.7; font-weight: 300; }
+    .galeria-hint strong { color: var(--sage-600); font-weight: 400; }
+
+    /* ── GRAVAÇÕES ── */
+    #gravacoes { background: var(--nude-50); border-top: 1px solid var(--nude-200); }
+    .grav-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .grav-list { list-style: none; margin-top: 1.5rem; }
+    .grav-list li { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--nude-200); font-size: 0.84rem; color: var(--nude-600); font-weight: 300; letter-spacing: 0.03em; }
+    .grav-list li::before { content: ''; width: 6px; height: 6px; background: var(--sage-300); transform: rotate(45deg); flex-shrink: 0; }
+    .grav-quote { padding: 3rem 2.5rem; border: 1px solid var(--nude-200); background: var(--white); text-align: center; }
+    .grav-quote p { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-style: italic; color: var(--nude-700); line-height: 1.6; }
+    .grav-quote small { display: block; margin-top: 1.1rem; font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-500); }
+
+    /* ── RELOJOARIA ── */
+    #relojoaria { background: var(--sage-700); }
+    .reloj-wrap { max-width: 820px; margin: 0 auto; text-align: center; }
+    .reloj-wrap .eyebrow { color: var(--sage-200); }
+    .reloj-wrap .sec-h { color: var(--nude-50); }
+    .reloj-wrap .sec-h em { color: var(--sage-200); }
+    .reloj-wrap .sec-p { color: var(--sage-300); margin: 1rem auto 0; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; margin-top: 2rem; }
+    .badge { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.45rem 1.1rem; border: 1px solid rgba(192,212,180,0.25); color: var(--sage-100); background: rgba(192,212,180,0.08); }
+    .btn-nude { display: inline-block; margin-top: 2.8rem; padding: 0.9rem 2.4rem; background: var(--nude-100); color: var(--nude-700); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; font-weight: 400; transition: background 0.22s, transform 0.18s; }
+    .btn-nude:hover { background: var(--nude-50); transform: translateY(-2px); }
+
+    /* ── REDES ── */
+    #redes { background: var(--sage-50); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); }
+    .redes-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+    .redes-cards { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2.5rem; }
+    .rede-card { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2.5rem 3rem; border: 1px solid var(--sage-200); background: var(--white); text-decoration: none; color: var(--nude-700); min-width: 220px; transition: border-color 0.22s, background 0.22s, transform 0.2s; }
+    .rede-card:hover { border-color: var(--sage-400); background: var(--sage-50); transform: translateY(-3px); }
+    .rede-card-icon { width: 56px; height: 56px; border: 1px solid var(--sage-200); background: var(--sage-100); display: flex; align-items: center; justify-content: center; }
+    .rede-card-icon svg { width: 26px; height: 26px; fill: var(--sage-600); }
+    .rede-card-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--nude-700); }
+    .rede-card-handle { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--sage-600); }
+    .rede-card-cta { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-500); border: 1px solid var(--sage-200); padding: 0.32rem 0.9rem; margin-top: 0.3rem; }
+
+    /* ── CONTATO ── */
+    #contato { background: var(--white); border-top: 1px solid var(--nude-200); }
+    .contato-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .contato-items { margin-top: 2rem; }
+    .ci { display: flex; align-items: flex-start; gap: 1.2rem; padding: 1.1rem 0; border-bottom: 1px solid var(--nude-100); }
+    .ci-gem { width: 8px; height: 8px; border: 1px solid var(--sage-400); background: var(--sage-100); transform: rotate(45deg); flex-shrink: 0; margin-top: 0.45rem; }
+    .ci-lbl { font-size: 0.57rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--sage-600); margin-bottom: 0.3rem; }
+    .ci-val { font-size: 0.88rem; color: var(--nude-600); line-height: 1.65; font-weight: 300; }
+    .ci-val a { color: var(--nude-600); text-decoration: none; transition: color 0.2s; }
+    .ci-val a:hover { color: var(--sage-600); }
+    .wa-btn { display: inline-flex; align-items: center; gap: 0.8rem; margin-top: 2.2rem; padding: 0.9rem 2rem; background: #25D366; color: #fff; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s, transform 0.18s; }
+    .wa-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+    .mapa-box { background: var(--nude-50); border: 1px solid var(--nude-200); padding: 3.5rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; min-height: 340px; }
+    .mapa-diamond-wrap { width: 56px; height: 56px; border: 1px solid var(--sage-200); background: var(--sage-100); display: flex; align-items: center; justify-content: center; transform: rotate(45deg); margin-bottom: 0.3rem; }
+    .mapa-diamond-wrap span { display: block; transform: rotate(-45deg); font-size: 1.5rem; }
+    .mapa-addr { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--nude-700); line-height: 1.65; }
+    .mapa-sub { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-400); }
+    .btn-mapa { margin-top: 0.4rem; padding: 0.62rem 1.6rem; border: 1px solid var(--nude-200); color: var(--nude-600); font-size: 0.63rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; background: var(--white); transition: background 0.2s; display: inline-block; }
+    .btn-mapa:hover { background: var(--nude-100); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); padding: 3rem 5vw; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; text-align: center; }
+    .ft-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--nude-100); letter-spacing: 0.06em; }
+    .ft-rule { width: 36px; height: 1px; background: var(--sage-400); }
+    .ft-socials { display: flex; gap: 1rem; }
+    .ft-social { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid rgba(192,212,180,0.25); color: var(--sage-300); text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .ft-social:hover { border-color: var(--sage-400); color: var(--sage-200); }
+    .ft-social svg { width: 15px; height: 15px; fill: currentColor; }
+    .ft-copy { font-size: 0.63rem; letter-spacing: 0.14em; color: var(--nude-400); font-weight: 300; line-height: 1.85; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      nav.open .nav-links { display: flex; flex-direction: column; position: fixed; top: 62px; left: 0; right: 0; bottom: 0; background: var(--nude-50); align-items: center; justify-content: center; gap: 2.5rem; }
+      .sobre-grid, .grav-grid, .contato-grid, .horarios-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .sobre-frame { max-width: 300px; margin: 0 auto; }
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+      .redes-cards { flex-direction: column; align-items: center; }
+      .horarios-visual { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-brand">
+    <span class="nav-brand-main">Joalheria & Óptica Biz</span>
+    <span class="nav-brand-sub">Desde 1958 · São Francisco do Sul</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#horarios">Horários</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#redes">Redes</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://instagram.com/oticabiz" target="_blank" class="nav-social-ico" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="nav-social-ico" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+    </a>
+    <a href="https://wa.me/554734441191" target="_blank" class="nav-cta">WhatsApp</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-since">
+    <span class="since-line"></span>
+    <span class="since-text">Tradição familiar desde 1958</span>
+    <span class="since-line"></span>
+  </div>
+  <h1>Joalheria<br>& Óptica <em>Biz</em></h1>
+  <p class="hero-sub">Excelência em joias, óptica e relojoaria<br>em São Francisco do Sul</p>
+  <div class="hero-rule"></div>
+  <div class="hero-actions">
+    <a href="#servicos" class="btn-dark">Nossos Serviços</a>
+    <a href="#galeria" class="btn-sage">Ver Galeria</a>
+    <a href="#contato" class="btn-outline">Fale Conosco</a>
+  </div>
+</section>
+
+<!-- SOCIAL STRIP -->
+<div class="social-strip">
+  <span class="social-strip-label">Siga-nos</span>
+  <a href="https://instagram.com/oticabiz" target="_blank" class="social-pill">
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    @oticabiz no Instagram
+  </a>
+  <a href="https://www.facebook.com/Oticabiz" target="_blank" class="social-pill">
+    <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+    Oticabiz no Facebook
+  </a>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="reveal">
+      <div class="sobre-frame">
+        <div class="sobre-frame-ico">💍</div>
+        <div class="sobre-frame-cap">Três gerações · Uma tradição</div>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow reveal">Nossa História</p>
+      <h2 class="sec-h reveal">Quase <em>70 anos</em><br>de tradição</h2>
+      <p class="sec-p reveal">Fundada em 20 de setembro de 1958, a Joalheria e Óptica Biz é um patrimônio de São Francisco do Sul. Hoje na terceira geração, mantemos o mesmo compromisso de qualidade, confiança e atendimento personalizado.</p>
+      <p class="sec-p reveal" style="margin-top:0.6rem;">Joias em prata, ouro e folheado, armações, lentes, óculos de sol, relógios e muito mais — tudo com a atenção que apenas décadas de experiência proporcionam.</p>
+      <div class="stats reveal">
+        <div class="stat"><div class="stat-n">66+</div><div class="stat-l">Anos de história</div></div>
+        <div class="stat"><div class="stat-n">3ª</div><div class="stat-l">Geração familiar</div></div>
+        <div class="stat"><div class="stat-n">1958</div><div class="stat-l">Fundação</div></div>
+        <div class="stat"><div class="stat-n">SFS</div><div class="stat-l">São Francisco do Sul</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORÁRIOS -->
+<section id="horarios">
+  <div class="horarios-inner">
+    <div>
+      <p class="eyebrow reveal">Quando Nos Encontrar</p>
+      <h2 class="sec-h reveal">Horário de <em>Funcionamento</em></h2>
+      <div class="horarios-cards reveal">
+        <div class="horario-row">
+          <span class="horario-dot"></span>
+          <span class="horario-dia">Segunda — Sexta</span>
+          <span class="horario-horas">9h – 12h &nbsp;·&nbsp; 13h30 – 18h</span>
+        </div>
+        <div class="horario-row">
+          <span class="horario-dot"></span>
+          <span class="horario-dia">Sábado</span>
+          <span class="horario-horas">9h – 12h</span>
+        </div>
+        <div class="horario-row closed">
+          <span class="horario-dot off"></span>
+          <span class="horario-dia">Domingo</span>
+          <span class="horario-horas fechado">Fechado</span>
+        </div>
+      </div>
+      <p class="horarios-note reveal">Atendemos também pelo WhatsApp fora do horário comercial. Fique à vontade para enviar uma mensagem!</p>
+    </div>
+    <div class="horarios-visual reveal">
+      <div class="horarios-clock">
+        <div class="horarios-clock-inner">
+          <span class="clock-emoji">🕘</span>
+        </div>
+      </div>
+      <p class="horarios-tagline">Sempre prontos<br>para atendê-lo</p>
+      <a href="https://wa.me/554734441191" target="_blank" class="btn-sage" style="font-size:0.65rem;padding:0.7rem 1.6rem;">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="srv-hd">
+    <p class="eyebrow reveal">O Que Oferecemos</p>
+    <h2 class="sec-h reveal">Nossos <em>Produtos</em> & Serviços</h2>
+  </div>
+  <div class="srv-grid reveal">
+    <div class="srv"><div class="srv-ico">💍</div><div class="srv-title">Joias & Bijuterias</div><p class="srv-desc">Amplo acervo em prata 925, ouro 18k e folheado a ouro. Anéis, colares, pulseiras e brincos para todos os estilos.</p><span class="srv-tag">Prata · Ouro · Folheado</span></div>
+    <div class="srv"><div class="srv-ico">👓</div><div class="srv-title">Óptica Completa</div><p class="srv-desc">Armações para todos os rostos, lentes oftálmicas com tecnologia de ponta e óculos de sol com proteção UV.</p><span class="srv-tag">Armações · Lentes · Solar</span></div>
+    <div class="srv"><div class="srv-ico">⌚</div><div class="srv-title">Relógios</div><p class="srv-desc">Relógios de pulso, de parede e despertadores das principais marcas. Para presentear ou uso próprio.</p><span class="srv-tag">Pulso · Parede · Despertador</span></div>
+    <div class="srv"><div class="srv-ico">🔧</div><div class="srv-title">Oficina de Relógios</div><p class="srv-desc">Oficina altamente especializada em manutenção e restauro — de peças do dia a dia a relógios antigos e de colecionador.</p><span class="srv-tag">Manutenção · Restauro</span></div>
+    <div class="srv"><div class="srv-ico">✒️</div><div class="srv-title">Gravações Especializadas</div><p class="srv-desc">Personalizamos joias, facas, isqueiros e outros itens de metal com gravações de alta precisão.</p><span class="srv-tag">Personalização · Metal</span></div>
+    <div class="srv"><div class="srv-ico">⚒️</div><div class="srv-title">Serviços de Ourives</div><p class="srv-desc">Em parceria com ourives especializado: reforma, ajuste e criação de peças exclusivas em ouro e prata.</p><span class="srv-tag">Reforma · Criação · Ouro</span></div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="galeria-hd">
+    <p class="eyebrow reveal">Nossa Vitrine</p>
+    <h2 class="sec-h reveal">Galeria de <em>Fotos</em></h2>
+    <p class="sec-p reveal">Confira nossos produtos e novidades. Para ver mais, siga <strong>@oticabiz</strong> no Instagram!</p>
+  </div>
+
+  <!-- Grade: substitua os src="" pelas URLs das suas fotos -->
+  <div class="galeria-grid reveal">
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-1">
+      <div class="galeria-placeholder">
+        <span class="galeria-placeholder-icon">📷</span>
+        <span class="galeria-placeholder-text">Foto 1</span>
+      </div>
+      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-2">
+      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 2</span></div>
+      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-3">
+      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 3</span></div>
+      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-4">
+      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 4</span></div>
+      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-5">
+      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 5</span></div>
+      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-6">
+      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 6</span></div>
+      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+  </div>
+
+  <div class="galeria-hint reveal">
+    <p>💡 <strong>Para adicionar suas fotos:</strong> salve as imagens do Instagram no seu computador e envie para mim aqui no chat — eu as coloco na galeria. Ou escolha a integração automática via <strong>Behold.so</strong> (gratuito) e a galeria atualiza sozinha!</p>
+  </div>
+
+  <div class="galeria-cta reveal">
+    <a href="https://instagram.com/oticabiz" target="_blank" class="galeria-insta-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Ver mais no Instagram @oticabiz
+    </a>
+  </div>
+</section>
+
+<!-- GRAVAÇÕES -->
+<section id="gravacoes">
+  <div class="grav-grid">
+    <div>
+      <p class="eyebrow reveal">Arte & Personalização</p>
+      <h2 class="sec-h reveal">Gravações em <em>Metal</em></h2>
+      <p class="sec-p reveal">Transformamos objetos em memórias permanentes. Nossa especialização em gravações em pequenas peças de metal permite personalizar com precisão e delicadeza.</p>
+      <ul class="grav-list reveal">
+        <li>Joias — anéis, pulseiras, pingentes</li>
+        <li>Facas e canivetes</li>
+        <li>Isqueiros personalizados</li>
+        <li>Chaveiros e medalhas</li>
+        <li>Outros itens pequenos em metal</li>
+        <li>Peças comemorativas e presentes</li>
+      </ul>
+    </div>
+    <div class="grav-quote reveal">
+      <p>"Um presente gravado é uma memória que dura para sempre"</p>
+      <small>Joalheria & Óptica Biz · Especialistas em Gravações</small>
+    </div>
+  </div>
+</section>
+
+<!-- RELOJOARIA -->
+<section id="relojoaria">
+  <div class="reloj-wrap">
+    <p class="eyebrow reveal">Expertise Técnica</p>
+    <h2 class="sec-h reveal">Oficina de <em>Relojoaria</em></h2>
+    <p class="sec-p reveal">Com décadas de experiência, cuidamos do seu relógio com atenção e precisão — do mais simples ao mais antigo e raro.</p>
+    <div class="badges reveal">
+      <span class="badge">Troca de pilha</span>
+      <span class="badge">Ajuste de pulseira</span>
+      <span class="badge">Revisão completa</span>
+      <span class="badge">Limpeza interna</span>
+      <span class="badge">Restauração de peças antigas</span>
+      <span class="badge">Relógios mecânicos</span>
+      <span class="badge">Relógios a quartz</span>
+    </div>
+    <a href="https://wa.me/554734441191?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20a%20oficina%20de%20relógios." target="_blank" class="btn-nude reveal">Solicitar Orçamento</a>
+  </div>
+</section>
+
+<!-- REDES SOCIAIS -->
+<section id="redes">
+  <div class="redes-inner">
+    <p class="eyebrow reveal">Conecte-se Conosco</p>
+    <h2 class="sec-h reveal">Nossas <em>Redes Sociais</em></h2>
+    <p class="sec-p reveal" style="margin: 0.8rem auto 0; text-align:center;">Acompanhe novidades, lançamentos e promoções. Estamos sempre por perto!</p>
+    <div class="redes-cards">
+      <a href="https://instagram.com/oticabiz" target="_blank" class="rede-card reveal">
+        <div class="rede-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        <div class="rede-card-name">Instagram</div>
+        <div class="rede-card-handle">@oticabiz</div>
+        <span class="rede-card-cta">Seguir ↗</span>
+      </a>
+      <a href="https://www.facebook.com/Oticabiz" target="_blank" class="rede-card reveal">
+        <div class="rede-card-icon"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></div>
+        <div class="rede-card-name">Facebook</div>
+        <div class="rede-card-handle">Oticabiz</div>
+        <span class="rede-card-cta">Curtir página ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="contato-grid">
+    <div>
+      <p class="eyebrow reveal">Visite-nos</p>
+      <h2 class="sec-h reveal">Onde <em>Estamos</em></h2>
+      <div class="contato-items reveal">
+        <div class="ci"><div class="ci-gem"></div><div><div class="ci-lbl">Endereço</div><div class="ci-val">Rua Dr. Lauro Müller, 41<br>São Francisco do Sul — SC — Brasil</div></div></div>
+        <div class="ci"><div class="ci-gem"></div><div><div class="ci-lbl">Telefone & WhatsApp</div><div class="ci-val"><a href="tel:+554734441191">(47) 3444-1191</a></div></div></div>
+        <div class="ci"><div class="ci-gem"></div><div><div class="ci-lbl">E-mail</div><div class="ci-val"><a href="mailto:contato@joalheriabiz.com.br">contato@joalheriabiz.com.br</a></div></div></div>
+        <div class="ci"><div class="ci-gem"></div><div><div class="ci-lbl">Horário</div><div class="ci-val">Seg–Sex: 9h–12h e 13h30–18h<br>Sábado: 9h–12h</div></div></div>
+        <div class="ci"><div class="ci-gem"></div><div><div class="ci-lbl">Redes Sociais</div><div class="ci-val"><a href="https://instagram.com/oticabiz" target="_blank">Instagram: @oticabiz</a><br><a href="https://www.facebook.com/Oticabiz" target="_blank">Facebook: Oticabiz</a></div></div></div>
+      </div>
+      <a href="https://wa.me/554734441191?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="wa-btn">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar pelo WhatsApp
+      </a>
+    </div>
+    <div class="mapa-box reveal">
+      <div class="mapa-diamond-wrap"><span>📍</span></div>
+      <p class="mapa-addr">Rua Dr. Lauro Müller, 41<br>São Francisco do Sul, SC</p>
+      <p class="mapa-sub">Centro Histórico · Fácil acesso</p>
+      <a href="https://maps.google.com/?q=Joalheria+Biz+São+Francisco+do+Sul" target="_blank" class="btn-mapa">Ver no Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-logo">Joalheria & Óptica Biz</div>
+  <div class="ft-rule"></div>
+  <div class="ft-socials">
+    <a href="https://instagram.com/oticabiz" target="_blank" class="ft-social" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="ft-social" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+    </a>
+  </div>
+  <p class="ft-copy">© 1958–2025 · Joalheria e Óptica Biz · São Francisco do Sul — SC<br>Tradição de três gerações em joias, óptica e relojoaria.</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 70); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  const toggle = document.getElementById('navToggle');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+</body>
+</html>
