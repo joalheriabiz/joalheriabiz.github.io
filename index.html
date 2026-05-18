@@ -75,9 +75,9 @@
     /* ── SOCIAL STRIP ── */
     .social-strip { background: var(--sage-100); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); padding: 1rem 5vw; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
     .social-strip-label { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-600); }
-    .social-pill { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.5rem 1.2rem; border: 1px solid var(--sage-300); background: var(--white); color: var(--sage-700); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.12em; transition: background 0.2s, transform 0.18s; }
-    .social-pill:hover { background: var(--sage-50); transform: translateY(-1px); }
-    .social-pill svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+    .social-pill { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.3rem 0; background: none; border: none; color: var(--sage-700); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.12em; transition: transform 0.18s, opacity 0.2s; }
+    .social-pill:hover { transform: translateY(-2px); opacity: 0.85; }
+    .social-pill svg { flex-shrink: 0; border-radius: 10px; }
 
     /* ── SECTION ── */
     section { padding: 7rem 5vw; }
@@ -215,12 +215,12 @@
     /* ── REDES ── */
     #redes { background: var(--sage-50); border-top: 1px solid var(--sage-200); }
     .redes-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-    .redes-cards { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2.5rem; }
-    .rede-card { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2.5rem 3rem; border: 1px solid var(--sage-200); background: var(--white); text-decoration: none; color: var(--nude-700); min-width: 200px; transition: border-color 0.22s, background 0.22s, transform 0.2s; }
-    .rede-card:hover { border-color: var(--sage-400); background: var(--sage-50); transform: translateY(-3px); }
-    .rede-card-icon { width: 52px; height: 52px; border: 1px solid var(--sage-200); background: var(--sage-100); display: flex; align-items: center; justify-content: center; }
-    .rede-card-icon svg { width: 24px; height: 24px; fill: var(--sage-600); }
-    .rede-card-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--nude-700); }
+    .redes-cards { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; margin-top: 2.5rem; }
+    .rede-card { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--nude-700); transition: transform 0.2s; }
+    .rede-card:hover { transform: translateY(-4px); }
+    .rede-card-icon { width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; border-radius: 18px; overflow: hidden; }
+    .rede-card-icon svg { width: 72px; height: 72px; }
+    .rede-card-name { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--nude-700); }
     .rede-card-handle { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--sage-600); }
     .rede-card-cta { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-500); border: 1px solid var(--sage-200); padding: 0.3rem 0.9rem; }
 
@@ -249,9 +249,8 @@
     .ft-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--nude-100); letter-spacing: 0.06em; }
     .ft-rule { width: 36px; height: 1px; background: var(--sage-400); }
     .ft-socials { display: flex; gap: 1rem; }
-    .ft-social { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid rgba(192,212,180,0.25); color: var(--sage-300); text-decoration: none; transition: border-color 0.2s, color 0.2s; }
-    .ft-social:hover { border-color: var(--sage-400); color: var(--sage-200); }
-    .ft-social svg { width: 15px; height: 15px; fill: currentColor; }
+    .ft-social { display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.2s, opacity 0.2s; border-radius: 12px; overflow: hidden; }
+    .ft-social:hover { transform: translateY(-2px); opacity: 0.85; }
     .ft-copy { font-size: 0.63rem; letter-spacing: 0.14em; color: var(--nude-400); font-weight: 300; line-height: 1.85; }
 
     /* ── ANIMATIONS ── */
@@ -322,8 +321,21 @@
 <!-- SOCIAL STRIP -->
 <div class="social-strip">
   <span class="social-strip-label">Siga-nos</span>
-  <a href="https://instagram.com/oticabiz" target="_blank" class="social-pill"><svg width="15" height="15"><use href="#ico-ig"/></svg>@oticabiz no Instagram</a>
-  <a href="https://www.facebook.com/Oticabiz" target="_blank" class="social-pill"><svg width="15" height="15"><use href="#ico-fb"/></svg>Oticabiz no Facebook</a>
+  <a href="https://instagram.com/oticabiz" target="_blank" class="social-pill"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+            <defs><radialGradient id="ig-gstrip1" cx="30%" cy="107%" r="150%">
+              <stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/>
+              <stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/>
+              <stop offset="90%" stop-color="#285AEB"/>
+            </radialGradient></defs>
+            <rect width="72" height="72" rx="18" fill="url(#ig-gstrip1)"/>
+            <rect x="18" y="18" width="36" height="36" rx="9" fill="none" stroke="#fff" stroke-width="3.5"/>
+            <circle cx="36" cy="36" r="9" fill="none" stroke="#fff" stroke-width="3.5"/>
+            <circle cx="47.5" cy="24.5" r="2.5" fill="#fff"/>
+          </svg>@oticabiz no Instagram</a>
+  <a href="https://www.facebook.com/Oticabiz" target="_blank" class="social-pill"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+            <rect width="72" height="72" rx="18" fill="#1877F2"/>
+            <path d="M40.5 22h3.5v-7.8S41.5 14 39 14c-5.5 0-9 3-9 9v5h-5v8h5v20h8V36h6.6l.9-8H38v-2.7c0-2 .5-3.3 3.3-3.3h-.8z" fill="#fff" transform="translate(-2,0)"/>
+          </svg>Oticabiz no Facebook</a>
 </div>
 
 <!-- SOBRE -->
@@ -619,13 +631,35 @@
     <p class="sec-p reveal" style="margin:0.8rem auto 0;text-align:center;">Acompanhe novidades, lançamentos e promoções!</p>
     <div class="redes-cards">
       <a href="https://instagram.com/oticabiz" target="_blank" class="rede-card reveal">
-        <div class="rede-card-icon"><svg width="24" height="24"><use href="#ico-ig"/></svg></div>
+        <div class="rede-card-icon">
+          <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+                <stop offset="0%" stop-color="#fdf497"/>
+                <stop offset="5%" stop-color="#fdf497"/>
+                <stop offset="45%" stop-color="#fd5949"/>
+                <stop offset="60%" stop-color="#d6249f"/>
+                <stop offset="90%" stop-color="#285AEB"/>
+              </radialGradient>
+            </defs>
+            <rect width="72" height="72" rx="18" fill="url(#ig-grad)"/>
+            <rect x="18" y="18" width="36" height="36" rx="9" fill="none" stroke="#fff" stroke-width="3.5"/>
+            <circle cx="36" cy="36" r="9" fill="none" stroke="#fff" stroke-width="3.5"/>
+            <circle cx="47.5" cy="24.5" r="2.5" fill="#fff"/>
+          </svg>
+        </div>
         <div class="rede-card-name">Instagram</div>
         <div class="rede-card-handle">@oticabiz</div>
         <span class="rede-card-cta">Seguir ↗</span>
       </a>
       <a href="https://www.facebook.com/Oticabiz" target="_blank" class="rede-card reveal">
-        <div class="rede-card-icon"><svg width="24" height="24"><use href="#ico-fb"/></svg></div>
+        <div class="rede-card-icon">
+          <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <rect width="72" height="72" rx="18" fill="#1877F2"/>
+            <path d="M46 36h-7v20h-8V36h-5v-8h5v-5c0-6 3.5-9 9-9 2.5 0 5 .2 5 .2V22h-3c-2.8 0-3.3 1.3-3.3 3.3V28h6.6l-.9 8H39v20h-8V36h-5v-8h5v-5c0-6 3.5-9 9-9 2.5 0 5 .2 5 .2V22z" fill="none"/>
+            <path d="M40.5 22h3.5v-7.8S41.5 14 39 14c-5.5 0-9 3-9 9v5h-5v8h5v20h8V36h6.6l.9-8H38v-2.7c0-2 .5-3.3 3.3-3.3h-.8z" fill="#fff" transform="translate(-2,0)"/>
+          </svg>
+        </div>
         <div class="rede-card-name">Facebook</div>
         <div class="rede-card-handle">Oticabiz</div>
         <span class="rede-card-cta">Curtir página ↗</span>
@@ -670,8 +704,21 @@
   <div class="ft-logo">Joalheria & Óptica Biz</div>
   <div class="ft-rule"></div>
   <div class="ft-socials">
-    <a href="https://instagram.com/oticabiz" target="_blank" class="ft-social" aria-label="Instagram"><svg width="15" height="15"><use href="#ico-ig"/></svg></a>
-    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="ft-social" aria-label="Facebook"><svg width="15" height="15"><use href="#ico-fb"/></svg></a>
+    <a href="https://instagram.com/oticabiz" target="_blank" class="ft-social" aria-label="Instagram"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <defs><radialGradient id="ig-gft1" cx="30%" cy="107%" r="150%">
+              <stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/>
+              <stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/>
+              <stop offset="90%" stop-color="#285AEB"/>
+            </radialGradient></defs>
+            <rect width="72" height="72" rx="18" fill="url(#ig-gft1)"/>
+            <rect x="18" y="18" width="36" height="36" rx="9" fill="none" stroke="#fff" stroke-width="3.5"/>
+            <circle cx="36" cy="36" r="9" fill="none" stroke="#fff" stroke-width="3.5"/>
+            <circle cx="47.5" cy="24.5" r="2.5" fill="#fff"/>
+          </svg></a>
+    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="ft-social" aria-label="Facebook"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <rect width="72" height="72" rx="18" fill="#1877F2"/>
+            <path d="M40.5 22h3.5v-7.8S41.5 14 39 14c-5.5 0-9 3-9 9v5h-5v8h5v20h8V36h6.6l.9-8H38v-2.7c0-2 .5-3.3 3.3-3.3h-.8z" fill="#fff" transform="translate(-2,0)"/>
+          </svg></a>
   </div>
   <p class="ft-copy">© 1958–2026 · Joalheria e Óptica Biz · São Francisco do Sul — SC<br>Tradição de três gerações em joias, óptica e relojoaria.</p>
 </footer>
