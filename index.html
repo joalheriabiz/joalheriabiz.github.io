@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joalheria e Óptica Biz | São Francisco do Sul - SC</title>
-  <meta name="description" content="Joalheria e Óptica Biz - Tradição desde 1958. Joias em prata, ouro e folheado, óculos, lentes, relógios e gravações especializadas em São Francisco do Sul - SC." />
+  <meta name="description" content="Joalheria e Óptica Biz - Tradição desde 1958. Joias em prata, ouro e folheado, óculos, lentes, relógios e gravações em São Francisco do Sul - SC." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
@@ -28,29 +28,21 @@
       --sage-700: #263A1F;
       --gold:     #B8963E;
       --gold-lt:  #D4B06A;
-      --gold-dk:  #7A6020;
       --ink:      #2A1F12;
       --white:    #FFFEFB;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Lato', sans-serif; background: var(--nude-50); color: var(--nude-700); overflow-x: hidden; }
 
     /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 5vw;
-      background: rgba(250,246,241,0.96); backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--nude-200); transition: box-shadow 0.3s;
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 5vw; background: rgba(250,246,241,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--nude-200); transition: box-shadow 0.3s; }
     nav.scrolled { box-shadow: 0 2px 28px rgba(80,60,39,0.08); }
     .nav-brand { text-decoration: none; line-height: 1.2; }
     .nav-brand-main { display: block; font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 500; color: var(--nude-700); letter-spacing: 0.02em; }
-    .nav-brand-sub  { display: block; font-size: 0.57rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--sage-500); font-weight: 300; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-600); text-decoration: none; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
+    .nav-brand-sub { display: block; font-size: 0.57rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--sage-500); font-weight: 300; }
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nude-600); text-decoration: none; opacity: 0.75; transition: opacity 0.2s, color 0.2s; }
     .nav-links a:hover { opacity: 1; color: var(--sage-600); }
     .nav-right { display: flex; align-items: center; gap: 0.6rem; }
     .nav-social-ico { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid var(--nude-200); color: var(--nude-500); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
@@ -63,11 +55,11 @@
 
     /* ── HERO ── */
     #hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 9rem 5vw 5rem; background: var(--nude-50); position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 50% 50% at 20% 80%, rgba(192,212,180,0.18) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 80% 20%, rgba(192,212,180,0.14) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 50% 50%, rgba(212,191,163,0.12) 0%, transparent 70%); }
+    .hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 50% 50% at 20% 80%, rgba(192,212,180,0.18) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 80% 20%, rgba(192,212,180,0.14) 0%, transparent 60%); }
     .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(160,127,94,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(160,127,94,0.03) 1px, transparent 1px); background-size: 64px 64px; }
     .hero-since { display: flex; align-items: center; gap: 16px; margin-bottom: 2.2rem; animation: fadeUp 0.9s ease both; }
     .since-line { width: 44px; height: 1px; background: var(--sage-400); }
-    .since-text { font-size: 0.6rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--sage-600); font-weight: 400; }
+    .since-text { font-size: 0.6rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--sage-600); }
     #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6.8rem); font-weight: 400; line-height: 1.07; color: var(--nude-700); animation: fadeUp 0.9s 0.12s ease both; }
     #hero h1 em { font-style: italic; color: var(--sage-600); }
     .hero-sub { margin-top: 1.5rem; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-400); font-weight: 300; animation: fadeUp 0.9s 0.24s ease both; }
@@ -81,11 +73,11 @@
     .btn-outline:hover { border-color: var(--nude-400); background: var(--nude-100); transform: translateY(-2px); }
 
     /* ── SOCIAL STRIP ── */
-    .social-strip { background: var(--sage-100); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); padding: 1.1rem 5vw; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-    .social-strip-label { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-600); font-weight: 400; }
-    .social-pill { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.52rem 1.3rem; border: 1px solid var(--sage-300); background: var(--white); color: var(--sage-700); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.14em; font-weight: 400; transition: background 0.2s, border-color 0.2s, transform 0.18s; }
-    .social-pill:hover { background: var(--sage-50); border-color: var(--sage-400); transform: translateY(-1px); }
-    .social-pill svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+    .social-strip { background: var(--sage-100); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); padding: 1rem 5vw; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .social-strip-label { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-600); }
+    .social-pill { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.5rem 1.2rem; border: 1px solid var(--sage-300); background: var(--white); color: var(--sage-700); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.12em; transition: background 0.2s, transform 0.18s; }
+    .social-pill:hover { background: var(--sage-50); transform: translateY(-1px); }
+    .social-pill svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
 
     /* ── SECTION ── */
     section { padding: 7rem 5vw; }
@@ -97,10 +89,9 @@
     /* ── SOBRE ── */
     #sobre { background: var(--white); border-top: 1px solid var(--nude-200); }
     .sobre-grid { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .sobre-frame { width: 100%; max-width: 420px; aspect-ratio: 3/4; border: 1px solid var(--nude-200); background: var(--nude-100); display: flex; align-items: center; justify-content: center; position: relative; }
-    .sobre-frame::before { content: ''; position: absolute; top: 16px; left: 16px; right: 16px; bottom: 16px; border: 1px solid rgba(90,127,76,0.15); pointer-events: none; }
-    .sobre-frame-ico { font-size: 5.5rem; opacity: 0.1; user-select: none; }
-    .sobre-frame-cap { position: absolute; bottom: 2.2rem; left: 0; right: 0; text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.9rem; color: var(--sage-600); opacity: 0.75; }
+    .sobre-frame { width: 100%; max-width: 420px; aspect-ratio: 3/4; border: 1px solid var(--nude-200); background: var(--nude-100); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .sobre-frame::before { content: ''; position: absolute; top: 16px; left: 16px; right: 16px; bottom: 16px; border: 1px solid rgba(90,127,76,0.18); pointer-events: none; z-index: 1; }
+    .sobre-frame img { width: 100%; height: 100%; object-fit: cover; }
     .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 2.2rem; background: var(--nude-200); border: 1px solid var(--nude-200); }
     .stat { background: var(--nude-50); padding: 1.4rem 1.2rem; }
     .stat-n { font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 400; color: var(--sage-600); line-height: 1; }
@@ -111,32 +102,21 @@
     .horarios-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .horarios-cards { display: flex; flex-direction: column; gap: 1px; background: var(--sage-200); border: 1px solid var(--sage-200); margin-top: 2rem; }
     .horario-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 1.1rem 1.5rem; gap: 1rem; }
-    .horario-row.closed { background: var(--nude-50); opacity: 0.6; }
-    .horario-dia { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--nude-600); font-weight: 400; }
-    .horario-horas { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--sage-700); font-style: italic; text-align: right; }
-    .horario-horas.fechado { font-family: 'Lato', sans-serif; font-style: normal; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nude-400); }
+    .horario-row.closed { background: var(--nude-50); opacity: 0.55; }
+    .horario-dia { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--nude-600); }
+    .horario-horas { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--sage-700); font-style: italic; }
+    .horario-horas.fechado { font-family: 'Lato', sans-serif; font-style: normal; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nude-400); }
     .horario-dot { width: 8px; height: 8px; background: var(--sage-400); border-radius: 50%; flex-shrink: 0; }
     .horario-dot.off { background: var(--nude-300); }
-    .horarios-note { margin-top: 1.2rem; font-size: 0.75rem; color: var(--sage-600); line-height: 1.7; font-weight: 300; }
-    .horarios-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; }
-    .horarios-clock {
-      width: 160px; height: 160px;
-      border: 1px solid var(--sage-200); background: var(--white);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      position: relative;
-    }
-    .horarios-clock-inner {
-      width: 120px; height: 120px;
-      border: 1px solid var(--sage-100); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .clock-emoji { font-size: 3rem; }
+    .horarios-visual { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+    .horarios-clock { width: 160px; height: 160px; border: 1px solid var(--sage-200); background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .horarios-clock-inner { width: 120px; height: 120px; border: 1px solid var(--sage-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
     .horarios-tagline { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--sage-700); text-align: center; line-height: 1.5; }
 
     /* ── SERVIÇOS ── */
     #servicos { background: var(--nude-50); }
     .srv-hd { text-align: center; margin-bottom: 3.5rem; }
-    .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; max-width: 1200px; margin: 0 auto; background: var(--nude-200); border: 1px solid var(--nude-200); }
+    .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1px; max-width: 1200px; margin: 0 auto; background: var(--nude-200); border: 1px solid var(--nude-200); }
     .srv { background: var(--white); padding: 2.5rem 2rem 2.2rem; border-bottom: 2px solid transparent; transition: border-color 0.25s, background 0.22s; }
     .srv:hover { border-bottom-color: var(--sage-400); background: var(--sage-50); }
     .srv-ico { width: 46px; height: 46px; border: 1px solid var(--nude-200); background: var(--nude-100); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.2rem; }
@@ -146,68 +126,65 @@
 
     /* ── GALERIA ── */
     #galeria { background: var(--nude-100); border-top: 1px solid var(--nude-200); }
-    .galeria-hd { text-align: center; margin-bottom: 3rem; }
+    .galeria-hd { text-align: center; margin-bottom: 2.5rem; }
     .galeria-hd .sec-p { margin: 0.8rem auto 0; text-align: center; }
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 4px;
-      max-width: 960px; margin: 0 auto 2.5rem;
-    }
-    .galeria-item {
-      aspect-ratio: 1/1;
-      background: var(--nude-200);
-      border: 1px solid var(--nude-200);
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden; position: relative;
-      cursor: pointer;
-      transition: transform 0.22s;
-    }
-    .galeria-item img {
-      width: 100%; height: 100%; object-fit: cover;
-      display: block; transition: transform 0.4s ease;
-    }
-    .galeria-item:hover img { transform: scale(1.05); }
-    /* placeholder when no image */
-    .galeria-placeholder {
-      width: 100%; height: 100%;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 0.5rem; background: var(--nude-100);
-    }
-    .galeria-placeholder-icon { font-size: 2rem; opacity: 0.25; }
-    .galeria-placeholder-text { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nude-400); }
+    .galeria-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-width: 960px; margin: 0 auto 2.5rem; }
+    .galeria-item { aspect-ratio: 1/1; overflow: hidden; position: relative; cursor: pointer; background: var(--nude-200); }
+    .galeria-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .galeria-item:hover img { transform: scale(1.06); }
     .galeria-overlay { position: absolute; inset: 0; background: rgba(38,58,31,0); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
-    .galeria-item:hover .galeria-overlay { background: rgba(38,58,31,0.25); }
+    .galeria-item:hover .galeria-overlay { background: rgba(38,58,31,0.22); }
     .galeria-overlay svg { opacity: 0; width: 28px; height: 28px; fill: var(--white); transition: opacity 0.3s; }
     .galeria-item:hover .galeria-overlay svg { opacity: 1; }
-    .galeria-cta { display: flex; justify-content: center; margin-top: 1rem; }
-    .galeria-insta-btn {
-      display: inline-flex; align-items: center; gap: 0.8rem;
-      padding: 0.9rem 2.2rem;
-      border: 1px solid var(--sage-300); background: var(--white);
-      color: var(--sage-700); text-decoration: none;
-      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
-      transition: background 0.2s, border-color 0.2s, transform 0.18s;
-    }
-    .galeria-insta-btn:hover { background: var(--sage-50); border-color: var(--sage-400); transform: translateY(-2px); }
-    .galeria-insta-btn svg { width: 18px; height: 18px; fill: var(--sage-600); }
-    /* upload hint */
-    .galeria-hint {
-      text-align: center; margin-top: 2rem;
-      padding: 1.5rem; border: 1px dashed var(--nude-300); background: var(--nude-50);
-      max-width: 560px; margin-left: auto; margin-right: auto;
-    }
-    .galeria-hint p { font-size: 0.78rem; color: var(--nude-500); line-height: 1.7; font-weight: 300; }
-    .galeria-hint strong { color: var(--sage-600); font-weight: 400; }
+    .galeria-cta { display: flex; justify-content: center; }
+    .galeria-insta-btn { display: inline-flex; align-items: center; gap: 0.8rem; padding: 0.9rem 2.2rem; border: 1px solid var(--sage-300); background: var(--white); color: var(--sage-700); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.2s, transform 0.18s; }
+    .galeria-insta-btn:hover { background: var(--sage-50); transform: translateY(-2px); }
+    .galeria-insta-btn svg { width: 17px; height: 17px; fill: var(--sage-600); }
+
+    /* ── CATÁLOGOS ── */
+    #catalogos { background: var(--white); border-top: 1px solid var(--nude-200); }
+    .catalogos-hd { text-align: center; margin-bottom: 3rem; }
+    .catalogos-hd .sec-p { margin: 0.8rem auto 0; text-align: center; }
+    .catalogos-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 900px; margin: 0 auto; }
+    .catalogo-card { flex: 1; min-width: 260px; max-width: 380px; border: 1px solid var(--nude-200); background: var(--nude-50); display: flex; flex-direction: column; overflow: hidden; transition: transform 0.22s, box-shadow 0.22s; }
+    .catalogo-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(80,60,39,0.1); }
+    .catalogo-cover { width: 100%; aspect-ratio: 3/4; background: var(--nude-100); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .catalogo-cover-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--nude-100), var(--sage-50)); }
+    .catalogo-cover-ico { position: relative; z-index: 1; text-align: center; }
+    .catalogo-cover-ico span { font-size: 3.5rem; display: block; }
+    .catalogo-cover-ico p { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--nude-600); margin-top: 0.5rem; font-style: italic; }
+    .catalogo-body { padding: 1.5rem 1.5rem 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; flex: 1; }
+    .catalogo-label { font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-600); }
+    .catalogo-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 400; color: var(--nude-700); line-height: 1.2; }
+    .catalogo-desc { font-size: 0.8rem; line-height: 1.75; color: var(--nude-400); font-weight: 300; flex: 1; }
+    .catalogo-btn { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 0.5rem; padding: 0.8rem 1.4rem; background: var(--nude-700); color: var(--nude-50); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; align-self: flex-start; transition: background 0.22s, transform 0.18s; }
+    .catalogo-btn:hover { background: var(--ink); transform: translateY(-2px); }
+    .catalogo-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ── MARCAS CAROUSEL ── */
+    #marcas { background: var(--nude-50); border-top: 1px solid var(--nude-200); padding: 4rem 0; overflow: hidden; }
+    .marcas-hd { text-align: center; padding: 0 5vw; margin-bottom: 2.5rem; }
+    .marcas-track-wrap { overflow: hidden; position: relative; }
+    .marcas-track-wrap::before,
+    .marcas-track-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+    .marcas-track-wrap::before { left: 0; background: linear-gradient(to right, var(--nude-50), transparent); }
+    .marcas-track-wrap::after { right: 0; background: linear-gradient(to left, var(--nude-50), transparent); }
+    .marcas-track { display: flex; gap: 0; animation: scroll-brands 32s linear infinite; width: max-content; }
+    .marcas-track:hover { animation-play-state: paused; }
+    .marca-item { display: flex; align-items: center; justify-content: center; padding: 0 2.5rem; height: 72px; border-right: 1px solid var(--nude-200); white-space: nowrap; }
+    .marca-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--nude-400); letter-spacing: 0.06em; transition: color 0.2s; }
+    .marca-item:hover .marca-name { color: var(--sage-600); }
+    .marca-cat { font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--nude-300); display: block; margin-top: 0.1rem; }
+    @keyframes scroll-brands { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
     /* ── GRAVAÇÕES ── */
-    #gravacoes { background: var(--nude-50); border-top: 1px solid var(--nude-200); }
+    #gravacoes { background: var(--nude-100); border-top: 1px solid var(--nude-200); }
     .grav-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
     .grav-list { list-style: none; margin-top: 1.5rem; }
-    .grav-list li { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--nude-200); font-size: 0.84rem; color: var(--nude-600); font-weight: 300; letter-spacing: 0.03em; }
+    .grav-list li { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--nude-200); font-size: 0.84rem; color: var(--nude-600); font-weight: 300; }
     .grav-list li::before { content: ''; width: 6px; height: 6px; background: var(--sage-300); transform: rotate(45deg); flex-shrink: 0; }
     .grav-quote { padding: 3rem 2.5rem; border: 1px solid var(--nude-200); background: var(--white); text-align: center; }
-    .grav-quote p { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-style: italic; color: var(--nude-700); line-height: 1.6; }
+    .grav-quote p { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; color: var(--nude-700); line-height: 1.6; }
     .grav-quote small { display: block; margin-top: 1.1rem; font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-500); }
 
     /* ── RELOJOARIA ── */
@@ -223,16 +200,16 @@
     .btn-nude:hover { background: var(--nude-50); transform: translateY(-2px); }
 
     /* ── REDES ── */
-    #redes { background: var(--sage-50); border-top: 1px solid var(--sage-200); border-bottom: 1px solid var(--sage-200); }
-    .redes-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+    #redes { background: var(--sage-50); border-top: 1px solid var(--sage-200); }
+    .redes-inner { max-width: 760px; margin: 0 auto; text-align: center; }
     .redes-cards { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2.5rem; }
-    .rede-card { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2.5rem 3rem; border: 1px solid var(--sage-200); background: var(--white); text-decoration: none; color: var(--nude-700); min-width: 220px; transition: border-color 0.22s, background 0.22s, transform 0.2s; }
+    .rede-card { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2.5rem 3rem; border: 1px solid var(--sage-200); background: var(--white); text-decoration: none; color: var(--nude-700); min-width: 200px; transition: border-color 0.22s, background 0.22s, transform 0.2s; }
     .rede-card:hover { border-color: var(--sage-400); background: var(--sage-50); transform: translateY(-3px); }
-    .rede-card-icon { width: 56px; height: 56px; border: 1px solid var(--sage-200); background: var(--sage-100); display: flex; align-items: center; justify-content: center; }
-    .rede-card-icon svg { width: 26px; height: 26px; fill: var(--sage-600); }
+    .rede-card-icon { width: 52px; height: 52px; border: 1px solid var(--sage-200); background: var(--sage-100); display: flex; align-items: center; justify-content: center; }
+    .rede-card-icon svg { width: 24px; height: 24px; fill: var(--sage-600); }
     .rede-card-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--nude-700); }
     .rede-card-handle { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--sage-600); }
-    .rede-card-cta { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-500); border: 1px solid var(--sage-200); padding: 0.32rem 0.9rem; margin-top: 0.3rem; }
+    .rede-card-cta { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-500); border: 1px solid var(--sage-200); padding: 0.3rem 0.9rem; }
 
     /* ── CONTATO ── */
     #contato { background: var(--white); border-top: 1px solid var(--nude-200); }
@@ -273,16 +250,24 @@
     @media (max-width: 860px) {
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
-      nav.open .nav-links { display: flex; flex-direction: column; position: fixed; top: 62px; left: 0; right: 0; bottom: 0; background: var(--nude-50); align-items: center; justify-content: center; gap: 2.5rem; }
+      nav.open .nav-links { display: flex; flex-direction: column; position: fixed; top: 62px; left: 0; right: 0; bottom: 0; background: var(--nude-50); align-items: center; justify-content: center; gap: 2.5rem; z-index: 99; }
       .sobre-grid, .grav-grid, .contato-grid, .horarios-inner { grid-template-columns: 1fr; gap: 3rem; }
       .sobre-frame { max-width: 300px; margin: 0 auto; }
       .galeria-grid { grid-template-columns: repeat(2, 1fr); }
-      .redes-cards { flex-direction: column; align-items: center; }
       .horarios-visual { display: none; }
+      .redes-cards { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
+
+<!-- SVG DEFS (icons reutilizáveis) -->
+<svg style="display:none">
+  <symbol id="ico-ig" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+  <symbol id="ico-fb" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></symbol>
+  <symbol id="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+  <symbol id="ico-dl" viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></symbol>
+</svg>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -295,16 +280,13 @@
     <li><a href="#horarios">Horários</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#galeria">Galeria</a></li>
-    <li><a href="#redes">Redes</a></li>
+    <li><a href="#catalogos">Catálogos</a></li>
+    <li><a href="#marcas">Marcas</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <div class="nav-right">
-    <a href="https://instagram.com/oticabiz" target="_blank" class="nav-social-ico" aria-label="Instagram">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="nav-social-ico" aria-label="Facebook">
-      <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-    </a>
+    <a href="https://instagram.com/oticabiz" target="_blank" class="nav-social-ico" aria-label="Instagram"><svg><use href="#ico-ig"/></svg></a>
+    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="nav-social-ico" aria-label="Facebook"><svg><use href="#ico-fb"/></svg></a>
     <a href="https://wa.me/554734441191" target="_blank" class="nav-cta">WhatsApp</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -313,17 +295,13 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-since">
-    <span class="since-line"></span>
-    <span class="since-text">Tradição familiar desde 1958</span>
-    <span class="since-line"></span>
-  </div>
+  <div class="hero-since"><span class="since-line"></span><span class="since-text">Tradição familiar desde 1958</span><span class="since-line"></span></div>
   <h1>Joalheria<br>& Óptica <em>Biz</em></h1>
   <p class="hero-sub">Excelência em joias, óptica e relojoaria<br>em São Francisco do Sul</p>
   <div class="hero-rule"></div>
   <div class="hero-actions">
     <a href="#servicos" class="btn-dark">Nossos Serviços</a>
-    <a href="#galeria" class="btn-sage">Ver Galeria</a>
+    <a href="#catalogos" class="btn-sage">Ver Catálogos</a>
     <a href="#contato" class="btn-outline">Fale Conosco</a>
   </div>
 </section>
@@ -331,14 +309,8 @@
 <!-- SOCIAL STRIP -->
 <div class="social-strip">
   <span class="social-strip-label">Siga-nos</span>
-  <a href="https://instagram.com/oticabiz" target="_blank" class="social-pill">
-    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    @oticabiz no Instagram
-  </a>
-  <a href="https://www.facebook.com/Oticabiz" target="_blank" class="social-pill">
-    <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-    Oticabiz no Facebook
-  </a>
+  <a href="https://instagram.com/oticabiz" target="_blank" class="social-pill"><svg width="15" height="15"><use href="#ico-ig"/></svg>@oticabiz no Instagram</a>
+  <a href="https://www.facebook.com/Oticabiz" target="_blank" class="social-pill"><svg width="15" height="15"><use href="#ico-fb"/></svg>Oticabiz no Facebook</a>
 </div>
 
 <!-- SOBRE -->
@@ -346,15 +318,14 @@
   <div class="sobre-grid">
     <div class="reveal">
       <div class="sobre-frame">
-        <div class="sobre-frame-ico">💍</div>
-        <div class="sobre-frame-cap">Três gerações · Uma tradição</div>
+        <img src="foto5.jpeg" alt="Joias Joalheria Biz" loading="lazy" />
       </div>
     </div>
     <div>
       <p class="eyebrow reveal">Nossa História</p>
       <h2 class="sec-h reveal">Quase <em>70 anos</em><br>de tradição</h2>
       <p class="sec-p reveal">Fundada em 20 de setembro de 1958, a Joalheria e Óptica Biz é um patrimônio de São Francisco do Sul. Hoje na terceira geração, mantemos o mesmo compromisso de qualidade, confiança e atendimento personalizado.</p>
-      <p class="sec-p reveal" style="margin-top:0.6rem;">Joias em prata, ouro e folheado, armações, lentes, óculos de sol, relógios e muito mais — tudo com a atenção que apenas décadas de experiência proporcionam.</p>
+      <p class="sec-p reveal" style="margin-top:0.6rem;">Joias em prata, ouro e folheado, armações e lentes oftálmicas, óculos de sol, relógios e muito mais — tudo com a atenção que apenas décadas de experiência proporcionam.</p>
       <div class="stats reveal">
         <div class="stat"><div class="stat-n">66+</div><div class="stat-l">Anos de história</div></div>
         <div class="stat"><div class="stat-n">3ª</div><div class="stat-l">Geração familiar</div></div>
@@ -372,30 +343,14 @@
       <p class="eyebrow reveal">Quando Nos Encontrar</p>
       <h2 class="sec-h reveal">Horário de <em>Funcionamento</em></h2>
       <div class="horarios-cards reveal">
-        <div class="horario-row">
-          <span class="horario-dot"></span>
-          <span class="horario-dia">Segunda — Sexta</span>
-          <span class="horario-horas">9h – 12h &nbsp;·&nbsp; 13h30 – 18h</span>
-        </div>
-        <div class="horario-row">
-          <span class="horario-dot"></span>
-          <span class="horario-dia">Sábado</span>
-          <span class="horario-horas">9h – 12h</span>
-        </div>
-        <div class="horario-row closed">
-          <span class="horario-dot off"></span>
-          <span class="horario-dia">Domingo</span>
-          <span class="horario-horas fechado">Fechado</span>
-        </div>
+        <div class="horario-row"><span class="horario-dot"></span><span class="horario-dia">Segunda — Sexta</span><span class="horario-horas">9h – 12h &nbsp;·&nbsp; 13h30 – 18h</span></div>
+        <div class="horario-row"><span class="horario-dot"></span><span class="horario-dia">Sábado</span><span class="horario-horas">9h – 12h</span></div>
+        <div class="horario-row closed"><span class="horario-dot off"></span><span class="horario-dia">Domingo</span><span class="horario-horas fechado">Fechado</span></div>
       </div>
-      <p class="horarios-note reveal">Atendemos também pelo WhatsApp fora do horário comercial. Fique à vontade para enviar uma mensagem!</p>
+      <p class="sec-p reveal" style="margin-top:1.2rem;">Atendemos também pelo WhatsApp fora do horário comercial. Fique à vontade para nos enviar uma mensagem!</p>
     </div>
     <div class="horarios-visual reveal">
-      <div class="horarios-clock">
-        <div class="horarios-clock-inner">
-          <span class="clock-emoji">🕘</span>
-        </div>
-      </div>
+      <div class="horarios-clock"><div class="horarios-clock-inner">🕘</div></div>
       <p class="horarios-tagline">Sempre prontos<br>para atendê-lo</p>
       <a href="https://wa.me/554734441191" target="_blank" class="btn-sage" style="font-size:0.65rem;padding:0.7rem 1.6rem;">Chamar no WhatsApp</a>
     </div>
@@ -409,11 +364,11 @@
     <h2 class="sec-h reveal">Nossos <em>Produtos</em> & Serviços</h2>
   </div>
   <div class="srv-grid reveal">
-    <div class="srv"><div class="srv-ico">💍</div><div class="srv-title">Joias & Bijuterias</div><p class="srv-desc">Amplo acervo em prata 925, ouro 18k e folheado a ouro. Anéis, colares, pulseiras e brincos para todos os estilos.</p><span class="srv-tag">Prata · Ouro · Folheado</span></div>
-    <div class="srv"><div class="srv-ico">👓</div><div class="srv-title">Óptica Completa</div><p class="srv-desc">Armações para todos os rostos, lentes oftálmicas com tecnologia de ponta e óculos de sol com proteção UV.</p><span class="srv-tag">Armações · Lentes · Solar</span></div>
-    <div class="srv"><div class="srv-ico">⌚</div><div class="srv-title">Relógios</div><p class="srv-desc">Relógios de pulso, de parede e despertadores das principais marcas. Para presentear ou uso próprio.</p><span class="srv-tag">Pulso · Parede · Despertador</span></div>
-    <div class="srv"><div class="srv-ico">🔧</div><div class="srv-title">Oficina de Relógios</div><p class="srv-desc">Oficina altamente especializada em manutenção e restauro — de peças do dia a dia a relógios antigos e de colecionador.</p><span class="srv-tag">Manutenção · Restauro</span></div>
-    <div class="srv"><div class="srv-ico">✒️</div><div class="srv-title">Gravações Especializadas</div><p class="srv-desc">Personalizamos joias, facas, isqueiros e outros itens de metal com gravações de alta precisão.</p><span class="srv-tag">Personalização · Metal</span></div>
+    <div class="srv"><div class="srv-ico">💍</div><div class="srv-title">Joias & Bijuterias</div><p class="srv-desc">Prata 925, ouro 18k e folheado a ouro. Anéis, colares, pulseiras e brincos para todos os estilos e ocasiões.</p><span class="srv-tag">Prata · Ouro · Folheado</span></div>
+    <div class="srv"><div class="srv-ico">👓</div><div class="srv-title">Óptica Completa</div><p class="srv-desc">Armações Ray-Ban, Mormaii, Carrera, Guess e mais. Lentes Varilux, Kodak, Crizal, Transitions com tecnologia de ponta.</p><span class="srv-tag">Armações · Lentes · Solar</span></div>
+    <div class="srv"><div class="srv-ico">⌚</div><div class="srv-title">Relógios</div><p class="srv-desc">Seculus, Orient, Champion, Casio, Guess, Lince, X-Watch, Herweg e mais. Pulso, parede e despertadores.</p><span class="srv-tag">Pulso · Parede · Despertador</span></div>
+    <div class="srv"><div class="srv-ico">🔧</div><div class="srv-title">Oficina de Relógios</div><p class="srv-desc">Manutenção e restauro especializados — de relógios do dia a dia a peças antigas e de colecionador.</p><span class="srv-tag">Manutenção · Restauro</span></div>
+    <div class="srv"><div class="srv-ico">✒️</div><div class="srv-title">Gravações Especializadas</div><p class="srv-desc">Gravações em joias, facas, isqueiros e itens de metal com alta precisão. Um toque eterno em cada peça.</p><span class="srv-tag">Personalização · Metal</span></div>
     <div class="srv"><div class="srv-ico">⚒️</div><div class="srv-title">Serviços de Ourives</div><p class="srv-desc">Em parceria com ourives especializado: reforma, ajuste e criação de peças exclusivas em ouro e prata.</p><span class="srv-tag">Reforma · Criação · Ouro</span></div>
   </div>
 </section>
@@ -422,50 +377,143 @@
 <section id="galeria">
   <div class="galeria-hd">
     <p class="eyebrow reveal">Nossa Vitrine</p>
-    <h2 class="sec-h reveal">Galeria de <em>Fotos</em></h2>
-    <p class="sec-p reveal">Confira nossos produtos e novidades. Para ver mais, siga <strong>@oticabiz</strong> no Instagram!</p>
+    <h2 class="sec-h reveal">Galeria de <em>Produtos</em></h2>
+    <p class="sec-p reveal">Uma seleção dos nossos produtos. Siga <strong>@oticabiz</strong> para ver muito mais!</p>
   </div>
-
-  <!-- Grade: substitua os src="" pelas URLs das suas fotos -->
   <div class="galeria-grid reveal">
-    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-1">
-      <div class="galeria-placeholder">
-        <span class="galeria-placeholder-icon">📷</span>
-        <span class="galeria-placeholder-text">Foto 1</span>
-      </div>
-      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank">
+      <img src="foto1.jpeg" alt="Relógio Seculus dourado" loading="lazy" />
+      <div class="galeria-overlay"><svg width="28" height="28"><use href="#ico-ig"/></svg></div>
     </a>
-    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-2">
-      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 2</span></div>
-      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank">
+      <img src="foto2.jpeg" alt="Relógio Orient Solartech" loading="lazy" />
+      <div class="galeria-overlay"><svg width="28" height="28"><use href="#ico-ig"/></svg></div>
     </a>
-    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-3">
-      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 3</span></div>
-      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank">
+      <img src="foto3.jpeg" alt="Colar e brinco dourado" loading="lazy" />
+      <div class="galeria-overlay"><svg width="28" height="28"><use href="#ico-ig"/></svg></div>
     </a>
-    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-4">
-      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 4</span></div>
-      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank">
+      <img src="foto4.jpeg" alt="Colares trevo folheados" loading="lazy" />
+      <div class="galeria-overlay"><svg width="28" height="28"><use href="#ico-ig"/></svg></div>
     </a>
-    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-5">
-      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 5</span></div>
-      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank">
+      <img src="foto5.jpeg" alt="Pulseiras douradas" loading="lazy" />
+      <div class="galeria-overlay"><svg width="28" height="28"><use href="#ico-ig"/></svg></div>
     </a>
-    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank" id="foto-6">
-      <div class="galeria-placeholder"><span class="galeria-placeholder-icon">📷</span><span class="galeria-placeholder-text">Foto 6</span></div>
-      <div class="galeria-overlay"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    <a class="galeria-item" href="https://instagram.com/oticabiz" target="_blank">
+      <img src="foto6.jpeg" alt="Relógio Champion prata com pulseiras" loading="lazy" />
+      <div class="galeria-overlay"><svg width="28" height="28"><use href="#ico-ig"/></svg></div>
     </a>
   </div>
-
-  <div class="galeria-hint reveal">
-    <p>💡 <strong>Para adicionar suas fotos:</strong> salve as imagens do Instagram no seu computador e envie para mim aqui no chat — eu as coloco na galeria. Ou escolha a integração automática via <strong>Behold.so</strong> (gratuito) e a galeria atualiza sozinha!</p>
-  </div>
-
   <div class="galeria-cta reveal">
     <a href="https://instagram.com/oticabiz" target="_blank" class="galeria-insta-btn">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      <svg width="17" height="17"><use href="#ico-ig"/></svg>
       Ver mais no Instagram @oticabiz
     </a>
+  </div>
+</section>
+
+<!-- CATÁLOGOS -->
+<section id="catalogos">
+  <div class="catalogos-hd">
+    <p class="eyebrow reveal">Consulte & Baixe</p>
+    <h2 class="sec-h reveal">Nossos <em>Catálogos</em></h2>
+    <p class="sec-p reveal">Folheie nossas coleções com calma. Faça o download gratuito e escolha a peça ideal!</p>
+  </div>
+  <div class="catalogos-grid">
+    <div class="catalogo-card reveal">
+      <div class="catalogo-cover">
+        <div class="catalogo-cover-bg"></div>
+        <div class="catalogo-cover-ico">
+          <span>💍</span>
+          <p>Anéis de Formatura</p>
+        </div>
+      </div>
+      <div class="catalogo-body">
+        <span class="catalogo-label">Coleção 2025</span>
+        <div class="catalogo-title">Catálogo Formatura</div>
+        <p class="catalogo-desc">Anéis em ouro 10k e 18k com pedras preciosas para marcar esse momento único. Pedras por curso, modelos femininos e masculinos.</p>
+        <a href="catalogo-formatura.pdf" download class="catalogo-btn">
+          <svg viewBox="0 0 24 24"><use href="#ico-dl"/></svg>
+          Baixar PDF
+        </a>
+      </div>
+    </div>
+    <div class="catalogo-card reveal">
+      <div class="catalogo-cover">
+        <div class="catalogo-cover-bg"></div>
+        <div class="catalogo-cover-ico">
+          <span>💎</span>
+          <p>Coleção Masculina</p>
+        </div>
+      </div>
+      <div class="catalogo-body">
+        <span class="catalogo-label">Coleção 2025</span>
+        <div class="catalogo-title">Catálogo Anel Masculino</div>
+        <p class="catalogo-desc">Anéis masculinos em ouro 10k e 18k com pedras preciosas. Modelos clássicos e modernos para todas as ocasiões.</p>
+        <a href="catalogo-masculino.pdf" download class="catalogo-btn">
+          <svg viewBox="0 0 24 24"><use href="#ico-dl"/></svg>
+          Baixar PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<section id="marcas">
+  <div class="marcas-hd">
+    <p class="eyebrow reveal">Quem Representa Nossa Qualidade</p>
+    <h2 class="sec-h reveal">Nossas <em>Marcas</em></h2>
+  </div>
+  <div class="marcas-track-wrap">
+    <div class="marcas-track" id="marcasTrack">
+      <!-- Óculos -->
+      <div class="marca-item"><div><div class="marca-name">Ray-Ban</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Mormaii</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">HB</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Carmim</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Cavalera</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Cacharel</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Carrera</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Guess</div><span class="marca-cat">Óculos & Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">XR</div><span class="marca-cat">Óculos</span></div></div>
+      <!-- Lentes -->
+      <div class="marca-item"><div><div class="marca-name">Varilux</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Kodak</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Crizal</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Transitions</div><span class="marca-cat">Lentes</span></div></div>
+      <!-- Relógios -->
+      <div class="marca-item"><div><div class="marca-name">Seculus</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Orient</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Champion</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Casio</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Lince</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">X-Watch</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Herweg</div><span class="marca-cat">Relógios</span></div></div>
+      <!-- Repetição para loop contínuo -->
+      <div class="marca-item"><div><div class="marca-name">Ray-Ban</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Mormaii</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">HB</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Carmim</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Cavalera</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Cacharel</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Carrera</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Guess</div><span class="marca-cat">Óculos & Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">XR</div><span class="marca-cat">Óculos</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Varilux</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Kodak</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Crizal</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Transitions</div><span class="marca-cat">Lentes</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Seculus</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Orient</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Champion</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Casio</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Lince</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">X-Watch</div><span class="marca-cat">Relógios</span></div></div>
+      <div class="marca-item"><div><div class="marca-name">Herweg</div><span class="marca-cat">Relógios</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -475,7 +523,7 @@
     <div>
       <p class="eyebrow reveal">Arte & Personalização</p>
       <h2 class="sec-h reveal">Gravações em <em>Metal</em></h2>
-      <p class="sec-p reveal">Transformamos objetos em memórias permanentes. Nossa especialização em gravações em pequenas peças de metal permite personalizar com precisão e delicadeza.</p>
+      <p class="sec-p reveal">Transformamos objetos em memórias permanentes. Nossa especialização permite personalizar com precisão e delicadeza.</p>
       <ul class="grav-list reveal">
         <li>Joias — anéis, pulseiras, pingentes</li>
         <li>Facas e canivetes</li>
@@ -516,16 +564,16 @@
   <div class="redes-inner">
     <p class="eyebrow reveal">Conecte-se Conosco</p>
     <h2 class="sec-h reveal">Nossas <em>Redes Sociais</em></h2>
-    <p class="sec-p reveal" style="margin: 0.8rem auto 0; text-align:center;">Acompanhe novidades, lançamentos e promoções. Estamos sempre por perto!</p>
+    <p class="sec-p reveal" style="margin:0.8rem auto 0;text-align:center;">Acompanhe novidades, lançamentos e promoções!</p>
     <div class="redes-cards">
       <a href="https://instagram.com/oticabiz" target="_blank" class="rede-card reveal">
-        <div class="rede-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        <div class="rede-card-icon"><svg width="24" height="24"><use href="#ico-ig"/></svg></div>
         <div class="rede-card-name">Instagram</div>
         <div class="rede-card-handle">@oticabiz</div>
         <span class="rede-card-cta">Seguir ↗</span>
       </a>
       <a href="https://www.facebook.com/Oticabiz" target="_blank" class="rede-card reveal">
-        <div class="rede-card-icon"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></div>
+        <div class="rede-card-icon"><svg width="24" height="24"><use href="#ico-fb"/></svg></div>
         <div class="rede-card-name">Facebook</div>
         <div class="rede-card-handle">Oticabiz</div>
         <span class="rede-card-cta">Curtir página ↗</span>
@@ -548,7 +596,7 @@
         <div class="ci"><div class="ci-gem"></div><div><div class="ci-lbl">Redes Sociais</div><div class="ci-val"><a href="https://instagram.com/oticabiz" target="_blank">Instagram: @oticabiz</a><br><a href="https://www.facebook.com/Oticabiz" target="_blank">Facebook: Oticabiz</a></div></div></div>
       </div>
       <a href="https://wa.me/554734441191?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="wa-btn">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg width="17" height="17"><use href="#ico-wa"/></svg>
         Falar pelo WhatsApp
       </a>
     </div>
@@ -566,25 +614,26 @@
   <div class="ft-logo">Joalheria & Óptica Biz</div>
   <div class="ft-rule"></div>
   <div class="ft-socials">
-    <a href="https://instagram.com/oticabiz" target="_blank" class="ft-social" aria-label="Instagram">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="ft-social" aria-label="Facebook">
-      <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-    </a>
+    <a href="https://instagram.com/oticabiz" target="_blank" class="ft-social" aria-label="Instagram"><svg width="15" height="15"><use href="#ico-ig"/></svg></a>
+    <a href="https://www.facebook.com/Oticabiz" target="_blank" class="ft-social" aria-label="Facebook"><svg width="15" height="15"><use href="#ico-fb"/></svg></a>
   </div>
   <p class="ft-copy">© 1958–2025 · Joalheria e Óptica Biz · São Francisco do Sul — SC<br>Tradição de três gerações em joias, óptica e relojoaria.</p>
 </footer>
 
 <script>
+  // Nav scroll
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+
+  // Reveal
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 70); obs.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Mobile nav
   const toggle = document.getElementById('navToggle');
   toggle.addEventListener('click', () => nav.classList.toggle('open'));
   document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
